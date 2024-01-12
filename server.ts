@@ -17,6 +17,12 @@ app.use(express.json())
 // app.use('/api/projects', require('./routes/projectRoutes'))
 app.use('/api/users',userRouter)
 
+app.get("/get",(req,res)=>{
+    res.send({
+        data:"Success",
+        status: 200
+    });
+})
 app.use(errorHandler)
 
 app.listen(PORT, () => console.log(`server started on port ${PORT}`))
